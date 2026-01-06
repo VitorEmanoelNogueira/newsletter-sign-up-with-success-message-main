@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    font-size: 62.5%;
+
+    --footer-height: 2.4rem;
+
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+
+    --font: "Roboto", sans-serif;
+    --font-weight-bold: 700;
+}
+
+/* Base */
+body{
+    font-family: var(--font);
+    line-height: 1.5;
+}
+
+/* Layout */
+.layout--min-height{
+    min-height: calc(100vh - var(--footer-height));
+}
+
+.layout--centered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.padding--layout{
+    padding: 0 2rem;
+}
+
+
+/* Module */
+.newsletter__background-image{
+    width: 100%;
+    padding: 0rem 2rem;
+    height: 25rem;
+    border-radius: 0 0 5% 5%;
+    background: url('../assets/images/illustration-sign-up-mobile.svg') no-repeat center center;
+    background-size: cover;
+}
+
+.newsletter__content{
+    margin: 3rem 0;
+}
+
+.title{
+    font-size: 3.2rem;
+}
+
+.text{
+    font-size:1.6rem;
+    color: var(--dark-slate-grey);
+}
+
+.text--bold{
+    font-weight: var(--font-weight-bold);
+    color: var(--dark-slate-grey)
+}
+
+.newsletter__success{
+    display: none !important;
+}
+
+.attribution { font-size: 1.1rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
