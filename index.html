@@ -7,46 +7,50 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-query.css">
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
-<body>
-<main class="newsletter layout--min-height layout--centered padding--layout">
-  
-  <div class="newsletter__background-image">
-    <!-- image -->
-  </div>
-    <!-- Sign-up form start -->
-  
-    <section class="newsletter__content">
-      <h1 class="content__title title text--bold">Stay updated!</h1>
-      <p class="content__text">Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul class="content__list list">
-        <li class="list__item">Product discovery and building what matters</li>
-        <li class="list__item">Measuring to ensure updates are a success</li>
-        <li class="list__item">And much more!</li>
-      </ul>
-      <form method="get" class="form content__form">
-        <label for="email" class="form__label text--bold">Email address</label>
-        <input type="email" name="email" id="email" placeholder="email@company.com" class="form__input" required>
-        <button type="submit" class="form__button button button--black">Subscribe to monthly newsletter</button>
-      </form>  
-    </section>
-    <!-- Sign-up form end -->
-  
-    <!-- Success message start -->
-    <section class="newsletter__success" hidden>
-      <h1 class="success__title title text--bold">Thanks for subscribing!</h1>
-      <p class="success_text">
-        A confirmation email has been sent to <strong class="text--bold">ash@loremcompany.com.</strong>
-        Please open it and click the button inside to confirm your subscription.
-      </p>
-      <button class="success__button button button--black">Dismiss message</button>
-    </section>
-    <!-- Success message end -->
-</main>
-  
-  <footer class="attribution">
+<body class="l-page t-bg-dark-slate l-min-h-screen">
+    <main class="c-newsletter t-bg-white l-max-w l-orientation l-h">
+      
+      <div class="newsletter__background-image-wrapper">
+        <div class="newsletter__background-image">
+          <!-- image -->
+        </div>
+      </div>
+      
+        <!-- Sign-up form start -->
+      
+        <section class="newsletter__content u-p-layout">
+          <h1 class="content__title title text--bold">Stay updated!</h1>
+          <p class="content__text">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="content__list list">
+            <li class="list__item">Product discovery and building what matters</li>
+            <li class="list__item">Measuring to ensure updates are a success</li>
+            <li class="list__item">And much more!</li>
+          </ul>
+          <form method="get" class="form content__form">
+            <label for="email" class="form__label text--bold">Email address</label>
+            <input type="email" name="email" id="email" placeholder="email@company.com" class="form__input" required>
+            <button type="submit" class="form__button button button--black">Subscribe to monthly newsletter</button>
+          </form>  
+        </section>
+        <!-- Sign-up form end -->
+      
+        <!-- Success message start -->
+        <section class="newsletter__success" hidden>
+          <h1 class="success__title title text--bold">Thanks for subscribing!</h1>
+          <p class="success_text">
+            A confirmation email has been sent to <strong class="text--bold">ash@loremcompany.com.</strong>
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+          <button class="success__button button button--black">Dismiss message</button>
+        </section>
+        <!-- Success message end -->
+    </main>
+
+  <footer class="attribution bg--white">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </p>
     <p>Coded by <a href="https://www.frontendmentor.io/profile/VitorEmanoelNogueira" target="_blank">Vitor Emanoel da Silva Nogueira</a>.</p>
   </footer>
