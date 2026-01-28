@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media-query.css">
+  <script defer src="/js/main.js"></script>
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
@@ -30,16 +31,30 @@
             <li class="list__item">Measuring to ensure updates are a success</li>
             <li class="list__item">And much more!</li>
           </ul>
-          <form method="get" class="form content__form">
-            <label for="email" class="form__label text--bold">Email address</label>
-            <input type="email" name="email" id="email" placeholder="email@company.com" class="form__input" required>
+          <form method="get" class="form content__form" novalidate>
+            <div class="form__field">
+              <div class="form__label-row">
+                <label for="email" class="form__label text--bold">Email address</label>
+                <span id="email-error" class="form__error error text--bold" aria-live="polite"></span>
+              </div>
+              <input
+              class="form__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email@company.com"
+              pattern="^[a-zA-Z0-9]+([\.\+-_]+[a-zA-Z0-9]+)*@([a-zA-Z0-9]+(-+[a-zA-Z0-9]+)*\.)+[a-zA-Z]{2,}$"
+              required
+              aria-describedby="email-error"
+              >
+            </div>
             <button type="submit" class="form__button button button--black">Subscribe to monthly newsletter</button>
           </form>  
         </section>
         <!-- Sign-up form end -->
       
         <!-- Success message start -->
-        <section class="newsletter__success t-bg-white u-p-layout" hidden>
+        <section class="newsletter__success t-bg-white u-p-layout">
           <img src="./assets/images/icon-success.svg" alt="Success Icon" class="success__icon">
           <h1 class="success__title title text--bold">Thanks for subscribing!</h1>
           <p class="success__text">

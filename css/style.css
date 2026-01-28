@@ -2,6 +2,8 @@
 :root{
     --tomato-pink:347, 100%, 66%;
     --tomato: 4, 100%, 67%;
+    --error: 9, 81%, 51%;
+    --error-bg: 4, 100%, 67%, 15%;
     --dark-slate-grey: hsl(234, 29%, 20%);
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(240, 6%, 79%);
@@ -38,10 +40,16 @@ body{
     padding: 0 1.5rem;
 }
 
+.is-success .c-newsletter{
+    background-color: transparent;
+}
 
 .newsletter__background-image-wrapper{
     width: 100%;
-    /* display: none; */
+}
+
+.is-success .newsletter__background-image-wrapper{
+    display: none;
 }
 
 /* Module */
@@ -55,7 +63,10 @@ body{
 
 .newsletter__content{
     margin: 1em 0;
-    /* display: none; */
+}
+
+.is-success .newsletter__content{
+    display: none;
 }
 
 .title{
@@ -95,9 +106,18 @@ body{
     margin-top: 2em;
 }
 
-.form__label{
-    font-size: 0.8rem;
+.form__field{
+    width: 100%;
+}
+
+.form__label-row{
+    display: flex;
+    justify-content: space-between;
     margin: 0.5em 0;
+}
+
+.form__label, .error{
+    font-size: 0.8rem;
 }
 
 .form__input, .form__button, .success__button{
@@ -111,6 +131,22 @@ body{
     padding-left: 1.25rem;
     border: 0.5px solid var(--grey);
     border-radius: 0.5em;
+}
+
+.form__input.is-error{
+    background-color: hsla(var(--error-bg));
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsl(var(--error));
+    color: hsl(var(--error));
+}
+
+.form__input.is-error:focus{
+    outline-color: hsl(var(--error));
+}
+
+.error{
+    color: hsl(var(--error));
 }
 
 .form__button{
@@ -144,6 +180,10 @@ body{
     flex-flow: column;
     justify-content: center;
     padding-top: 6em;
+}
+
+.is-success .newsletter__success{
+    display: flex;
 }
 
 .success__icon{
