@@ -1,3 +1,4 @@
+/* Base */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
     --tomato-pink:347, 100%, 66%;
@@ -13,7 +14,7 @@
     --font-weight-bold: 700;
 }
 
-/* Base */
+
 body{
     font-family: var(--font);
     line-height: 1.5;
@@ -21,6 +22,10 @@ body{
 }
 
 /* Layout */
+.o-surface{
+    background-color: white;
+}
+
 .l-min-h-screen{
     min-height: 100vh
 }
@@ -40,16 +45,10 @@ body{
     padding: 0 1.5rem;
 }
 
-.is-success .c-newsletter{
-    background-color: transparent;
-}
+/* Module */
 
 .newsletter__background-image-wrapper{
     width: 100%;
-}
-
-.is-success .newsletter__background-image-wrapper{
-    display: none;
 }
 
 /* Module */
@@ -63,10 +62,6 @@ body{
 
 .newsletter__content{
     margin: 1em 0;
-}
-
-.is-success .newsletter__content{
-    display: none;
 }
 
 .title{
@@ -133,18 +128,6 @@ body{
     border-radius: 0.5em;
 }
 
-.form__input.is-error{
-    background-color: hsla(var(--error-bg));
-    border-width: 1px;
-    border-style: solid;
-    border-color: hsl(var(--error));
-    color: hsl(var(--error));
-}
-
-.form__input.is-error:focus{
-    outline-color: hsl(var(--error));
-}
-
 .error{
     color: hsl(var(--error));
 }
@@ -168,22 +151,12 @@ body{
     font-weight: var(--font-weight-bold);
 }
 
-.button:hover, button:focus{
-    background: linear-gradient(to right, hsl(var(--tomato-pink)), hsl(var(--tomato)));
-    box-shadow: 0 10px 15px hsla(var(--tomato), 0.3);
-    cursor: pointer;
-}
-
 .newsletter__success{
     display: none;
     height: 100vh;
     flex-flow: column;
     justify-content: center;
     padding-top: 6em;
-}
-
-.is-success .newsletter__success{
-    display: flex;
 }
 
 .success__icon{
@@ -204,6 +177,37 @@ body{
 .attribution { font-size: 0.9rem; text-align: center;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
-.t-bg-white{
-    background-color: white;
+
+/* State */
+
+.is-success .c-newsletter{
+    background-color: transparent;
+}
+
+.is-success .newsletter__background-image-wrapper{
+    display: none;
+}
+
+.is-success .newsletter__content{
+    display: none;
+}
+
+.is-success .newsletter__success{
+    display: flex;
+}
+
+.form__input.is-error{
+    background-color: hsla(var(--error-bg));
+    border-color: hsl(var(--error));
+    color: hsl(var(--error));
+}
+
+.form__input.is-error:focus{
+    outline-color: hsl(var(--error));
+}
+
+.button:hover, button:focus{
+    background: linear-gradient(to right, hsl(var(--tomato-pink)), hsl(var(--tomato)));
+    box-shadow: 0 10px 15px hsla(var(--tomato), 0.3);
+    cursor: pointer;
 }

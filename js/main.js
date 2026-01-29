@@ -1,10 +1,10 @@
-const main = document.querySelector(".c-newsletter");
+const main = document.querySelector(".js-newsletter");
 
-const newsletterForm = main.querySelector(".content__form");
-const newsletterInput = newsletterForm.querySelector("#email");
-const emailError = newsletterForm.querySelector("span.error");
+const newsletterForm = main.querySelector(".js-newsletter-form");
+const newsletterInput = newsletterForm.querySelector(".js-email-input");
+const emailError = newsletterForm.querySelector(".js-email-error");
 
-const successButton = main.querySelector(".success__button");
+const successButton = main.querySelector(".js-dismiss");
 
 let hasInteracted = false;
 
