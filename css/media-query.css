@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px){
+@media screen and (min-width: 37.5rem){
     /* Layout */
     .l-page{
         display:flex;
@@ -27,7 +27,7 @@
     }
 
     .attribution{
-        padding-top: 2em;
+        padding-block-start: 2em;
         color: white;
     }
 
@@ -37,10 +37,10 @@
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
     /* Layout */
     .l-page{
-        padding-top: 2rem;
+        padding-block-start: 2rem;
     }
 
     /* Module */
@@ -49,17 +49,17 @@
     }
 
     .newsletter__background-image{
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
+        border-start-start-radius: 2rem;
+        border-start-end-radius: 2rem;
         overflow: hidden;
     }
 
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 62rem) {
     /* Layout */
     .l-page{
-        padding-top: 1rem;
+        padding-block-start: 1rem;
     }
 
     .l-max-w{
@@ -72,7 +72,7 @@
     .l-orientation{
         flex-direction: row-reverse;
         justify-content: center;
-        margin-top: 3em;
+        margin-block-start: 3em;
     }
 
     /* Module */
@@ -116,19 +116,19 @@
     }
 
     .success__button{
-        margin-top:2.5em;
-        margin-bottom: 0;
+        margin-block-start:2.5em;
+        margin-block-end: 0;
     } 
 }
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 90rem){
     html{
-        font-size: 17px;
+        font-size: 106.25%;
     }
 }
 
-@media screen and (min-width: 1700px){
+@media screen and (min-width: 100rem){
     html{
-        font-size: 18px;
+        font-size: 112.5%;
     }
 }
