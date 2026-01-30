@@ -50,14 +50,14 @@ Users should be able to:
 ### What I learned
 
 - How to handle background-images efficiently with wrappers and aspect ratio;
-- The distinction between layout, components, and objects in HTML & CSS architecture
+- The distinction between layout, components, and objects in HTML & CSS architecture;
 - How to manage components states more effectively using JS;
 - How to write more organized and maintainable RegEx;
 - How to make the layout more responsive in big screens with font-size in a simpler way.
 
 ### Continued development
 
-- Plan and analyze the project upfront to reduce mental blocks
+- Plan and analyze the project upfront to reduce mental blocks;
 - Reapply these lessons in future projects to work more efficiently;
 - Deepen understanding of CSS namespaces and class architecture;
 - Improve knowledge of JS form validation patterns.
