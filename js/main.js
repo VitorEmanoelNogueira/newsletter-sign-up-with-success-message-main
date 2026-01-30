@@ -4,6 +4,7 @@ const newsletterForm = main.querySelector(".js-newsletter-form");
 const newsletterInput = newsletterForm.querySelector(".js-email-input");
 const emailError = newsletterForm.querySelector(".js-email-error");
 
+const successEmail = main.querySelector(".js-success-email");
 const successButton = main.querySelector(".js-dismiss");
 
 let hasInteracted = false;
@@ -47,6 +48,11 @@ newsletterForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     if (validateEmail()){
+        const data = new FormData(newsletterForm);
+        const email = data.get("email");
+
+        successEmail.textContent = email;
+
         toggleSuccess();
         newsletterInput.value = "";
         emailError.textContent = "";
