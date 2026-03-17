@@ -5,33 +5,49 @@ const newsletterInput = newsletterForm.querySelector(".js-email-input");
 const emailError = newsletterForm.querySelector(".js-email-error");
 
 const successEmail = main.querySelector(".js-success-email");
-const successButton = main.querySelector(".js-dismiss");
+const dismissButton = main.querySelector(".js-dismiss");
 
 let hasInteracted = false;
 
 function validateEmail(){
     if (newsletterInput.validity.valueMissing){
-        emailError.textContent = "You need to enter an email address";   
-        emailError.classList.add("active");
-        newsletterInput.classList.add("is-error");
-         return false;
+        showError("You need to enter an email address");
+        return false;
     }
     
     if(newsletterInput.validity.patternMismatch){
-        emailError.textContent = "Valid email required";
-        emailError.classList.add("active");
-        newsletterInput.classList.add("is-error");
+        showError("Valid email required");
         return false;
     }
 
-    emailError.textContent = "";
-    emailError.classList.remove("active");
-    newsletterInput.classList.remove("is-error");
+    clearError();
     return true;
 }
 
-function toggleSuccess(){
-    document.body.classList.toggle("is-success");
+function showError(msg){
+    emailError.textContent = msg;
+    emailError.classList.add("active");
+    newsletterInput.classList.add("is-error");
+}
+
+function clearError(){
+    emailError.textContent = "";
+    emailError.classList.remove("active");
+    newsletterInput.classList.remove("is-error");
+}
+
+function showSuccess(email){
+    document.body.classList.add("is-success");
+    successEmail.textContent = email;
+}
+
+function hideSuccess(){
+    document.body.classList.remove("is-success");
+}
+
+function resetForm(){
+    newsletterInput.value = "";
+    hasInteracted = false;
 }
 
 newsletterInput.addEventListener("input", () => {
@@ -48,16 +64,10 @@ newsletterForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     if (validateEmail()){
-        const data = new FormData(newsletterForm);
-        const email = data.get("email");
-
-        successEmail.textContent = email;
-
-        toggleSuccess();
-        newsletterInput.value = "";
-        emailError.textContent = "";
-        hasInteracted = false;
+        const email = newsletterInput.value;
+        showSuccess(email);
+        resetForm();
     }
 });
 
-successButton.addEventListener("click", toggleSuccess);
+dismissButton.addEventListener("click", hideSuccess);
